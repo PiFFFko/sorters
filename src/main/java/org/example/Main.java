@@ -7,8 +7,9 @@ import java.util.Random;
 
 public class Main {
 
+    public static final int ARRAY_SIZE = 10;
     public static void main(String[] args) {
-        ArrayList<Integer> arr = generateArray(10);
+        ArrayList<Integer> arr = generateArray(ARRAY_SIZE);
         System.out.println(arr);
         arr = cocktailSort(arr);
         System.out.println(arr);
