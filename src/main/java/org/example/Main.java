@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> arr = generateArray(10);
         System.out.println(arr);
-        arr = bubbleSort(arr);
+        arr = cocktailSort(arr);
         System.out.println(arr);
     }
 
@@ -26,7 +26,6 @@ public class Main {
         return arr;
     }
 
-    //QuickSort
     public static ArrayList<Integer> quickSort(ArrayList<Integer> arr){
         //if array contains 1 or 0 elements that returns that array, cause its already sorted
         if (arr.size() <= 1){
@@ -72,14 +71,27 @@ public class Main {
         return arr;
     }
 
-    public static ArrayList<Integer> cocktailSort(ArrayList<Integer> arr){
+    public static ArrayList<Integer> cocktailSort(ArrayList<Integer> arr) {
+        int left = 0;
+        int right = arr.size() - 1;
+        while (left < right) {
+            for (int i = left; i <= right-1; i++) {
+                if (arr.get(i) > arr.get(i + 1)) {
+                    Collections.swap(arr, i, i + 1);
+                }
+            }
+            right--;
+
+            for (int i = right; i>=left+1; i--){
+                if (arr.get(i) < arr.get(i-1)){
+                    Collections.swap(arr,i,i-1);
+                }
+            }
+            left++;
+        }
 
         return arr;
     }
-
-
-
-
 
 
 }
