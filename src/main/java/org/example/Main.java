@@ -7,6 +7,13 @@ import java.util.Random;
 
 public class Main {
 
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = generateArray(10);
+        System.out.println(arr);
+        arr = bubbleSort(arr);
+        System.out.println(arr);
+    }
+
     //Generate array of integer
     // int size  - number of Integers
     public static ArrayList<Integer> generateArray(int size){
@@ -65,12 +72,14 @@ public class Main {
         return arr;
     }
 
-    public static void main(String[] args) {
-        ArrayList<Integer> arr = generateArray(10);
-        System.out.println(arr);
-        arr = bubbleSort(arr);
-        System.out.println(arr);
+    public static ArrayList<Integer> cocktailSort(ArrayList<Integer> arr){
+
+        return arr;
     }
+
+
+
+
 
 
 }
